@@ -1,0 +1,80 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2018-08-22T12:45:29.060Z",
+    "end": "2018-08-22T12:45:32.069Z",
+    "duration": 3009,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "passPercentClass": "danger",
+    "pendingPercentClass": "danger"
+  },
+  "suites": {
+    "uuid": "075986f5-5f12-4ef0-84c9-6c4956acbddd",
+    "title": "",
+    "fullFile": "",
+    "file": "",
+    "beforeHooks": [],
+    "afterHooks": [],
+    "tests": [],
+    "suites": [
+      {
+        "uuid": "a1bc47da-e9cd-4196-b0fa-b1df3ca57d6e",
+        "title": "Create User",
+        "fullFile": "",
+        "file": "",
+        "beforeHooks": [],
+        "afterHooks": [],
+        "tests": [
+          {
+            "title": "register",
+            "fullTitle": "Create User register",
+            "duration": 2946,
+            "state": "failed",
+            "pass": false,
+            "fail": true,
+            "pending": false,
+            "code": "cy.visit('http://localhost:3002');\ncy.get('.or-register > .ng-binding').click(); // go to register form\ncy.wait(1000);\nvar name = cy.get(':nth-child(2) > .form-control');\nname.type(faker.name.title(), {\n  force: true\n});\nvar email = cy.get(':nth-child(3) > .form-control');\nemail.type(faker.internet.email());\nvar username = cy.get(':nth-child(4) > .form-control');\nusername.type(faker.internet.userName());\nvar password = cy.get(':nth-child(5) > .form-control');\npassword.type('password');\nvar confirmation = cy.get(':nth-child(6) > .form-control');\nconfirmation.type('password');\ncy.get('.btn').click(); // register",
+            "err": {
+              "message": "CypressError: cy.visit() failed trying to load:\n\nhttp://localhost:3002/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:3002\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nThe stack trace for this error is:\n\nError: connect ECONNREFUSED 127.0.0.1:3002\n    at Object.exports._errnoException (util.js:1024:11)\n    at exports._exceptionWithHostPort (util.js:1047:20)\n    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1150:14)\n",
+              "estack": "CypressError: cy.visit() failed trying to load:\n\nhttp://localhost:3002/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:3002\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nThe stack trace for this error is:\n\nError: connect ECONNREFUSED 127.0.0.1:3002\n    at Object.exports._errnoException (util.js:1024:11)\n    at exports._exceptionWithHostPort (util.js:1047:20)\n    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1150:14)\n\n    at Object.cypressErr (http://localhost:55816/__cypress/runner/cypress_runner.js:68154:11)\n    at Object.throwErr (http://localhost:55816/__cypress/runner/cypress_runner.js:68119:18)\n    at Object.throwErrByPath (http://localhost:55816/__cypress/runner/cypress_runner.js:68146:17)\n    at http://localhost:55816/__cypress/runner/cypress_runner.js:58922:31\n    at visitFailedByErr (http://localhost:55816/__cypress/runner/cypress_runner.js:58533:12)\n    at http://localhost:55816/__cypress/runner/cypress_runner.js:58921:22\n    at tryCatcher (http://localhost:55816/__cypress/runner/cypress_runner.js:7091:23)\n    at Promise._settlePromiseFromHandler (http://localhost:55816/__cypress/runner/cypress_runner.js:5113:31)\n    at Promise._settlePromise (http://localhost:55816/__cypress/runner/cypress_runner.js:5170:18)\n    at Promise._settlePromise0 (http://localhost:55816/__cypress/runner/cypress_runner.js:5215:10)\n    at Promise._settlePromises (http://localhost:55816/__cypress/runner/cypress_runner.js:5290:18)\n    at Async._drainQueue (http://localhost:55816/__cypress/runner/cypress_runner.js:2023:16)\n    at Async._drainQueues (http://localhost:55816/__cypress/runner/cypress_runner.js:2033:10)\n    at Async.drainQueues (http://localhost:55816/__cypress/runner/cypress_runner.js:1907:14)\n    at <anonymous>"
+            },
+            "isRoot": false,
+            "uuid": "85d1235e-dd8f-4300-b7d7-b9cd5f0a2635",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [],
+        "failures": [
+          "85d1235e-dd8f-4300-b7d7-b9cd5f0a2635"
+        ],
+        "pending": [],
+        "skipped": [],
+        "duration": 2946,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 2000
+      }
+    ],
+    "passes": [],
+    "failures": [],
+    "pending": [],
+    "skipped": [],
+    "duration": 0,
+    "root": true,
+    "rootEmpty": true,
+    "_timeout": 2000
+  },
+  "copyrightYear": 2018
+}
